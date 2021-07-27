@@ -1,6 +1,5 @@
 const { exec } = require('child_process')
 
-
 exports.handler = (event, context, callback) => {
   const cmd = 'gs -sDEVICE=jpeg -dTextAlphaBits=4 -r144 -o /tmp/test.jpg test.pdf'
   exec(cmd, (err, stdout, stderr) => {
